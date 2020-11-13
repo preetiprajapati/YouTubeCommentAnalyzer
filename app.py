@@ -305,6 +305,7 @@ if submitButton.button(label='Submit'):
             col5, col6 = st.beta_columns([2,1])
             fig, (ax1, ax2) = plt.subplots(1, 2)
             df.plot(kind='bar', stacked=True,colormap=cmap,ax=ax1)
+            plt.sca(ax1)
             plt.ylabel("No. of comments")
             plt.xticks([0,1],labels=['Ham','Spam'],rotation='horizontal');
             
@@ -314,7 +315,8 @@ if submitButton.button(label='Submit'):
             
             df_overtime.fillna(0,inplace=True)
             df_overtime.plot(kind='bar',stacked='True',colormap=cmap,ax=ax2);
-
+            plt.sca(ax2)
+            plt.xticks(rotation = 45, ha="right")
             col5.pyplot(fig)
 
             #Display video thumbnail
