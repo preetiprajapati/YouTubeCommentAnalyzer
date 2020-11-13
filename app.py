@@ -61,7 +61,7 @@ inputURL, inputNumber,submitButton = st.beta_columns([1,.5,.5])
 
 with st.beta_container():
 #Get input
-    youTubeURL=inputURL.text_input(label='Enter YouTube music Video URL or use default',value='https://www.youtube.com/watch?v=X8PwL3OdfGw')
+    youTubeURL=inputURL.text_input(label='Enter YouTube music Video URL or use default',value='https://www.youtube.com/watch?v=RUQl6YcMalg')
     noOfComments=inputNumber.number_input(label='Enter no. of comments to read or use default',value=500)
 
 #Expandable sidebar
